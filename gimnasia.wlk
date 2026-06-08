@@ -60,10 +60,10 @@ class Persona {
 }
 
 class Sedentaria inherits Persona {
-    var property tiempoDeEjercicio
+    const tiempoDeEjercicio
     override method kilosPorCaloríaQuePierde() = 7000
     override method puedeHacerRutina(rutina) { return peso > 50 }
-    
+    override method tiempoDeEjercicio() { return tiempoDeEjercicio}
 }
 
 class Atleta inherits Persona{
