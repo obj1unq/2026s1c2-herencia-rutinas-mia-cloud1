@@ -1,4 +1,4 @@
-class Rutina {
+class Rutina { 
     method caloriasQuemadas(tiempo) {
         return 100 * (tiempo - self.descanso(tiempo)) * self.intensidad()
     }
@@ -7,9 +7,13 @@ class Rutina {
 }
 
 class Running inherits Rutina{
-    var property intensidad 
+    const intensidad 
     override method descanso(tiempo) {
         return if (tiempo > 20) 5 else 2
+    }
+
+    override method intensidad() {
+        return intensidad
     }
 }
 
